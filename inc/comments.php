@@ -1,5 +1,22 @@
 <?php if($row->comments == 1): ?>
 	<?php if(isSigned()): ?>
+		<!-- paging -->
+		<?php
+
+		    // source inclusion
+		    require_once 'pagination/Pagination.class.php';
+
+		    // determine page (based on <_GET>)
+		    $page = isset($_GET['page']) ? ((int) $_GET['page']) : 1;
+
+		    // instantiate; set current page; set number of records
+		    $pagination = (new Pagination());
+		    $pagination->setCurrent($page);
+		    $pagination->setTotal(count(getComments($row->pid)));
+
+		    // grab rendered/parsed pagination markup
+		    $markup = $pagination->parse();
+		    ?>
 		<div id="comment" class="well">
 			<?=isset($_SESSION['comment_flash'])?'<span class="text-danger">'.$_SESSION['comment_flash'].'</span>':'';unset($_SESSION['comment_flash']); ?>
 		<!-- </div> -->
@@ -18,14 +35,15 @@
 	    <!-- comment list -->
 	    <div class="list-group">
 	    <?php
-	    $comments = getComments($row->pid);
+	    $comments = getComments($row->pid,($page-1)*10,10);
 	    foreach($comments as $comment): ?>
 	    	<div class="list-group-item">
 	    		<a class="text-primary" href="profile.php?user=<?=$comment['username']?>"><?=$comment['username']?></a>
-	    		<blockquote class="small text-midnight"><?=$comment['comment']?></blockquote>
-	    		<p class="small text-grey"><small>Posted on: <?=date('Y-m-d H:i a', time($comment['created_at']))?></small></p>
+	    		<blockquote class="text-midnight"><?=$comment['comment']?></blockquote>
+	    		<p class="small text-grey">Posted on: <?=date('Y-m-d H:i a', time($comment['created_at']))?></p>
 	    	</div>
 		<?php endforeach; ?>
+		<center><?=$markup?></center>
 		</div>
 
 	<?php else: ?>

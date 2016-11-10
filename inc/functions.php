@@ -106,4 +106,11 @@ function pollExists($id) {
 function siteName() {
 	return "POLL";
 }
+
+function getUserById($id) {
+	global $c;
+	$id = $c->escape_string($id);
+	$result = $c->query("SELECT * FROM users WHERE user_id='$id'");
+	return (object) $result->fetch_assoc();
+}
 ?>

@@ -81,7 +81,7 @@
 
 		  				<form method="post">
 				            <div class="form-group">
-				              <input type="text" class="form-control login-field" value="" placeholder="Username" id="login-name" name="username" />
+				              <input type="text" class="form-control login-field" value="<?=$_POST['username']?>" placeholder="Username" id="login-name" name="username" />
 				              <label class="login-field-icon fui-user" for="login-name"></label>
 				            </div>
 
@@ -91,17 +91,17 @@
 				            </div>
 
 				            <div class="form-group">
-				              <input type="email" class="form-control login-field" value="" placeholder="Email" id="login-email" name="email" />
+				              <input type="email" class="form-control login-field" value="<?=$_POST['email']?>" placeholder="Email" id="login-email" name="email" />
 				              <label class="login-field-icon fui-mail" for="login-email"></label>
 				            </div>
 
 				            <div class="form-group">
-				              <input type="text" class="form-control login-field" value="" placeholder="First Name" id="login-fname" name="first_name" />
+				              <input type="text" class="form-control login-field" value="<?=$_POST['first_name']?>" placeholder="First Name" id="login-fname" name="first_name" />
 				              <label class="login-field-icon fui-new" for="login-fname"></label>
 				            </div>
 
 				            <div class="form-group">
-				              <input type="text" class="form-control login-field" value="" placeholder="Last Name" id="login-lname" name="last_name" />
+				              <input type="text" class="form-control login-field" value="<?=$_POST['last_name']?>" placeholder="Last Name" id="login-lname" name="last_name" />
 				              <label class="login-field-icon fui-new" for="login-lname"></label>
 				            </div>
 
