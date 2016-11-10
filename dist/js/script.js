@@ -30,7 +30,8 @@ $(document).ready(function() {
                 }
             },
             rowCount: [10, 25, 50, 75, 100],
-            rowSelect: true
+            rowSelect: true,
+            caseSensitive: false
         }).on("loaded.rs.jquery.bootgrid", function()
 {
     /* Executes after data is loaded and rendered */
@@ -44,7 +45,7 @@ $(document).ready(function() {
         $("#grid-command-buttons").bootgrid('remove', rows);
         var c = confirm("Are you sure to delete?");
         if(c == true) {
-            $.get('admin/deleteUser.php?id='+$(this).data("row-id"), function(data) {
+            $.get('deleteUser.php?id='+$(this).data("row-id"), function(data) {
                 if(data == "User deleted successfully")
                  $("#grid").bootgrid('remove', rows);
                 $("#message").html('<div class="alert alert-info">'+data+'</div>');
@@ -63,11 +64,12 @@ $(document).ready(function() {
             formatters: {
                 "link": function(column, row)
                 {
-                    return "<button data-row-id=\"" + row.id + "\" class=\"btn btn-xs btn-danger command-delete\"><i class='fa fa-trash'></i></button>";
+                    return "<a href=\"../vote.php?id=" + row.id + "\" class=\"btn btn-xs btn-inverse\">View</a> <button data-row-id=\"" + row.id + "\" class=\"btn btn-xs btn-danger command-delete\"><i class='fa fa-trash'></i></button>";
                 }
             },
             rowCount: [10, 25, 50, 75, 100],
-            rowSelect: true
+            rowSelect: true,
+            caseSensitive: false
         }).on("loaded.rs.jquery.bootgrid", function()
 {
     /* Executes after data is loaded and rendered */
@@ -81,9 +83,9 @@ $(document).ready(function() {
         $("#grid-command-buttons").bootgrid('remove', rows);
         var c = confirm("Are you sure to delete?");
         if(c == true) {
-            $.get('deleteUser.php?id='+$(this).data("row-id"), function(data) {
+            $.get('deletePoll.php?id='+$(this).data("row-id"), function(data) {
                 if(data == "Poll deleted successfully")
-                 $("#grid").bootgrid('remove', rows);
+                 $("#grid-poll").bootgrid('remove', rows);
                 $("#message").html('<div class="alert alert-info">'+data+'</div>');
                 
             });
