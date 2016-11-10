@@ -1,12 +1,10 @@
 <?php
 	session_start();
 	include '../inc/functions.php';
-	// global $c;
-	$c = new mysqli('localhost', 'root', '', 'poll');
-	if($c->connect_error) {
-		die($c->connect_error);
+	include '../inc/setup.php';
+	if(!isSigned() || !isAdmin()) {
+		echo "You cannot access this page.";
+		die;
 	}
-	if(isSigned()) {
-		$user = getUser($_SESSION['username']);
-	}
+	
 ?>

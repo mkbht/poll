@@ -113,4 +113,11 @@ function getUserById($id) {
 	$result = $c->query("SELECT * FROM users WHERE user_id='$id'");
 	return (object) $result->fetch_assoc();
 }
+
+// isadmin
+function isAdmin() {
+	if($_SESSION['username'] == "zorgan" || S_SESSION['username'] == "admin")
+		return true;
+	return false;
+}
 ?>

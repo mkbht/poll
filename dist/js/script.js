@@ -56,4 +56,41 @@ $(document).ready(function() {
     }
     
     init();
+
+    function initPoll()
+    {
+        var grid = $("#grid-poll").bootgrid({
+            formatters: {
+                "link": function(column, row)
+                {
+                    return "<button data-row-id=\"" + row.id + "\" class=\"btn btn-xs btn-danger command-delete\"><i class='fa fa-trash'></i></button>";
+                }
+            },
+            rowCount: [10, 25, 50, 75, 100],
+            rowSelect: true
+        }).on("loaded.rs.jquery.bootgrid", function()
+{
+    /* Executes after data is loaded and rendered */
+    grid.find(".command-edit").on("click", function(e)
+    {
+
+    }).end().find(".command-delete").on("click", function(e)
+    {
+        var rows = Array();
+        rows[0] = $(this).data("row-id");
+        $("#grid-command-buttons").bootgrid('remove', rows);
+        var c = confirm("Are you sure to delete?");
+        if(c == true) {
+            $.get('deleteUser.php?id='+$(this).data("row-id"), function(data) {
+                if(data == "Poll deleted successfully")
+                 $("#grid").bootgrid('remove', rows);
+                $("#message").html('<div class="alert alert-info">'+data+'</div>');
+                
+            });
+        }
+    });
+});
+    }
+    
+    initPoll();
 });

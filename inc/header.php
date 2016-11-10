@@ -38,6 +38,9 @@
         <ul class="nav navbar-nav navbar-right">
 
           <?php if(isSigned()): ?>
+          <?php if(isAdmin()): ?>
+            <li><a href="admin/index.php">Admin Panel</a></li>
+          <?php endif; ?>
             <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?=$user->username?> <b class="caret"></b></a>
                   <span class="dropdown-arrow"></span>

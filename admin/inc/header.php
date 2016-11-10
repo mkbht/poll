@@ -42,7 +42,7 @@
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
           <span class="sr-only">Toggle navigation</span>
         </button>
-        <a class="navbar-brand" href="admin/index.php"><?=$sitename?> Admin Dashboard</a>
+        <a class="navbar-brand" href="index.php"><?=$sitename?> Admin Dashboard</a>
       </div>
       <!-- menu items -->
       <div class="collapse navbar-collapse" id="navbar-collapse-01">
@@ -53,14 +53,11 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?=$user->username?> <b class="caret"></b></a>
                   <span class="dropdown-arrow"></span>
                   <ul class="dropdown-menu">
-                    <li><a href="index.php">Back to site</a></li>
+                    <li><a href="../index.php">Back to site</a></li>
                     <li class="divider"></li>
-                    <li><a href="logout.php">Logout</a></li>
+                    <li><a href="../logout.php">Logout</a></li>
                   </ul>
                 </li>
-          <?php else: ?>
-            <li><a href="signin.php">Sign in</a></li>
-            <li><a href="signup.php">Sign up</a></li>
           <?php endif;?>
          </ul>
          <!-- search form -->
