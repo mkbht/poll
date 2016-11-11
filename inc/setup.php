@@ -1,5 +1,5 @@
 <?php
-$c = new mysqli('localhost', 'root', '', 'poll');
+$c = new mysqli('localhost', 'root', 'dadagiri2', 'poll');
 	if($c->connect_error) {
 		die($c->connect_error);
 	}
