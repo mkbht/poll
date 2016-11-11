@@ -9,15 +9,20 @@ $title = "Home";
   			</div> -->
   				<div class="panel-body">
   				<h4>Create a Poll</h4>
-  					<form action="create-poll.php" method="post">
+          <?=isset($_SESSION["flash_msg"])?'<div class="alert alert-danger">'.$_SESSION["flash_msg"].'</div>': '';unset($_SESSION["flash_msg"]); ?>
+  					<form action="create-poll.php" method="post" enctype="multipart/form-data">
   						<div class="input-group">
   						  <span class="input-group-addon">?</span>
   						  <input required type="text" class="form-control" placeholder="Type your question here" name="question" />
   						</div>
   						<h5>Options <small class="text-primary">(Separated with commas)</small></h5>
   						<div class="tagsinput-primary">
-  							<input required name="options" class="tagsinput" data-role="tagsinput" />
+  							<input name="options" class="tagsinput" data-role="tagsinput" />
   						</div>
+              or
+              <!-- file input -->
+              <input type="file" name="files[]" id="uploadform" multiple="multiple">
+
   						<label class="radio">
   							<input type="radio" name="type" value="0" checked> No duplication checking
   						</label>

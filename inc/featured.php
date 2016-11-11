@@ -19,7 +19,7 @@
 							<label class="radio">
 								<input type="radio" name="options[]" value="{$option['opid']}"> {$option['answer']}
 							</label>
-						</li>
+						</li><br>
 HTML;
 					}
 				}

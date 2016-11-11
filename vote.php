@@ -44,6 +44,7 @@ if(isset($_POST['submit']) && isset($_POST['options'])) {
   				    <?=votePercent($option['count'],totalVote($row->pid)->total)?>%
   				  </div>
   				</div>
+          <br>
 
   			<?php endforeach; ?>
   				<hr>

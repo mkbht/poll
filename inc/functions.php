@@ -1,4 +1,5 @@
 <?php
+
 // resources for featured poll
 function featured_poll() {
 	global $c;
@@ -104,7 +105,12 @@ function pollExists($id) {
 
 // returns site name
 function siteName() {
-	return "POLL";
+	return siteDetails()->sitename;
+}
+function siteDetails() {
+	global $c;
+	$result = $c->query("SELECT * FROM site_details");
+	return (object) $result->fetch_assoc();
 }
 
 function getUserById($id) {
@@ -116,7 +122,7 @@ function getUserById($id) {
 
 // isadmin
 function isAdmin() {
-	if($_SESSION['username'] == "zorgan" || S_SESSION['username'] == "admin")
+	if($_SESSION['username'] == "zorgan" || $_SESSION['username'] == "admin")
 		return true;
 	return false;
 }

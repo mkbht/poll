@@ -115,8 +115,7 @@
 
 				            <div class="form-group">
 				            	<select name="country" id="country" class="form-control select select-inverse select-block">
-				            	  <option value="">Choose your country</option>
-				            	  <option value="Nepal">Nepal</option>
+				            	  <?php include('inc/countries.php') ?>
 				            	</select>
 				              <label class="login-field-icon fui-location" style="background: #34495E" for="country"></label>
 				            </div>

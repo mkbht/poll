@@ -26,5 +26,5 @@ include 'inc/header.php';
 	<?php endwhile; ?>
 	</tbody>
 </table>
-
+<?=count(array(array(), array()), COUNT_RECURSIVE)?>
 <?php include 'inc/footer.php'; ?>

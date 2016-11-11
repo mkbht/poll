@@ -2,6 +2,7 @@
   <ul class="nav nav-pills share nav-stacked">
     <li><a href="index.php">Users</a></li>
     <li><a href="polls.php">Polls</a></li>
+    <li><a href="editSite.php">Edit Site Details</a></li>
   </ul>
 </div>
 

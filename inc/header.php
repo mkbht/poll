@@ -11,8 +11,14 @@
     <!-- Loading Bootstrap -->
     <link href="dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- filer -->
+
     <!-- Loading Flat UI -->
     <link href="dist/css/flat-ui.min.css" rel="stylesheet">
+
+    
+    <link href="dist/css/jquery.filer.css" rel="stylesheet">
+    <link href="dist/css/themes/jquery.filer-dragdropbox-theme.css" rel="stylesheet">
 
     <!-- loading custom stylesheet -->
 

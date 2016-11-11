@@ -42,6 +42,7 @@ CREATE TABLE IF NOT EXISTS users
 	created_at TIMESTAMP NOT NULL default CURRENT_TIMESTAMP,
  	updated_at TIMESTAMP NOT NULL ON UPDATE CURRENT_TIMESTAMP
 );
+INSERT INTO users VALUES(0,'admin','$2y$10$Jt59m3eVd/TrbmX6b.oUBeW09EWm4qssObtZReJFXz8jhnaPnF6fG','Admin', 'Admin', '', 'Male', 'Global', '', '', '', '');
 
 CREATE TABLE IF NOT EXISTS comments (
 	cid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -51,3 +52,16 @@ CREATE TABLE IF NOT EXISTS comments (
 	created_at TIMESTAMP NOT NULL default CURRENT_TIMESTAMP,
  	updated_at TIMESTAMP NOT NULL ON UPDATE CURRENT_TIMESTAMP
 );
+
+CREATE TABLE IF NOT EXISTS site_details (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	sitename varchar(255) DEFAULT 'POLL',
+	description text,
+	about text,
+	privacy text,
+	disclaimer text,
+	tos text,
+	ad1 text,
+	ad2 text
+);
+INSERT INTO site_details VALUES (1,'Poll', 'A Poll website', '', '', '', '', '', '');
