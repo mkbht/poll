@@ -126,4 +126,36 @@ function isAdmin() {
 		return true;
 	return false;
 }
+
+
+function cookieCheck($id) {
+	global $c;
+	$cookie = $c->escape_string($_COOKIE['uid']);
+	$id = $c->escape_string($id);
+	$query = $c->query("SELECT * FROM typecheck WHERE pid='$id' AND cookie='$cookie'");
+	if($query->num_rows == 0)
+		return 0;
+	return 1;
+}
+
+function ipCheck($id) {
+	global $c;
+	$ip = $c->escape_string($_SERVER['REMOTE_ADDR']);
+	$id = $c->escape_string($id);
+	$query = $c->query("SELECT * FROM typecheck WHERE pid='$id' AND ip='$ip'");
+	if($query->num_rows == 0)
+		return 0;
+	return 1;
+}
+
+function userCheck($id) {
+	global $c;
+	$uid = getUser($_SESSION['username'])->user_id;
+	$id = $c->escape_string($id);
+	$query = $c->query("SELECT * FROM typecheck WHERE pid='$id' AND uid='$uid'");
+	if($query->num_rows == 0)
+		return 0;
+	return 1;
+}
+
 ?>

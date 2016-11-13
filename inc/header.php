@@ -32,7 +32,7 @@
 <body>
 <header>
 <!-- navigation bar -->
-  <nav class="navbar navbar-inverse navbar-lg" role="navigation">
+  <nav class="navbar navbar-default navbar-lg" role="navigation">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
           <span class="sr-only">Toggle navigation</span>
@@ -63,10 +63,10 @@
             <li><button class="btn btn-danger navbar-btn" type="button" onclick="window.location='index.php'"">Create Poll</button></li>
          </ul>
          <!-- search form -->
-        <form class="navbar-form" action="#" role="search">
+        <form class="navbar-form" action="search.php" role="search">
           <div class="form-group">
             <div class="input-group">
-              <input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
+              <input class="form-control" id="navbarInput-01" type="search" placeholder="Search" name="q">
               <span class="input-group-btn">
                 <button type="submit" class="btn"><span class="fui-search"></span></button>
               </span>
@@ -79,7 +79,10 @@
 
   <main>
     <div class="container">
-    <center><img src="dist/img/ad2.jpg" class="img-responsive"></center>
+    <center>
+    <small>Advertisement</small>
+      <?=siteDetails()->ad1?>
+    </center>
     <br>
       <div class="col-md-7">
       

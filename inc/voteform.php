@@ -1,6 +1,5 @@
-		<div class="center">
+		<div>
 			<form method="post" action="vote.php?id=<?=$row->pid?>">
-				<hr>
 				<ul class="options">
 				<?php $options = $c->query("SELECT * FROM poll_options WHERE pid='{$row->pid}'");
 				if(!$row->multiple) {
@@ -31,3 +30,4 @@ HTML;
 				<button type="submit" name="submit" class="btn btn-wide btn-primary">Vote</button>
 			</form>
 		</div>
+		<hr>

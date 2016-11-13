@@ -1,13 +1,14 @@
 		</div>
 		<div class="col-md-5">
-			<img src="dist/img/ad1.jpg" class="img-responsive">
+			<center><small>Advertisement</small></center>
+			<?=siteDetails()->ad2?>
 		</div>
 	</div> <!-- end container -->
 </main>
 <br>
 <footer class="palette palette-midnight-blue clearfix">
 	<div class="container">
-  © <?=date('Y')?> Poll Project
+  © <?=date('Y')?> - <?=siteName()?>
 </div>
 </footer>
 

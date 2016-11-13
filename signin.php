@@ -59,7 +59,7 @@ unset($_SESSION['flash_msg']);?>
 				            </div>
 
 				            <button class="btn btn-danger btn-lg btn-block" type="submit" name="submit">Log in</button>
-				            <a class="login-link" href="#">Lost your password?</a>
+				            <a class="login-link" href="lost-password.php">Lost your password?</a>
 				        </form>
 		  			</div>
 		  			<div class="login-footer">

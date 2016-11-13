@@ -50,5 +50,4 @@
 	Please <a href="signin.php">Signin</a> or <a href="signup.php">Signup</a> to view and post comments.
 <?php endif; ?>
 <?php else: ?>
-	Comments not enabled
 <?php endif; ?>

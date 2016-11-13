@@ -2,11 +2,11 @@
 	if(count((array) $row) > 0):
 ?>
 <br><br>
-<div class="panel panel-default tile">
+<div class="panel panel-default jumbotron tile" style="text-align:left">
 	<div class="panel-body">
 	<img src="dist/img/icons/svg/ribbon.svg" alt="ribbon" class="tile-hot-ribbon">
 	<!-- <div class="tile-hot-ribbon">hello</div> -->
-		<div class="center">
+		<div>
 			<form method="post" action="vote.php?id=<?=$row->pid?>">
 				<h6><?=$row->question?></h6>
 				<hr>

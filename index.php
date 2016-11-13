@@ -42,9 +42,9 @@ $title = "Home";
   						</label>
             <?php endif; ?>
   						<hr>
-  						<label class="checkbox">
+  						<!-- <label class="checkbox">
   							<input type="checkbox" name="spam" value="1"> Improve spam prevention
-  						</label>
+  						</label> -->
   						<label class="checkbox">
   							<input type="checkbox" name="multiple" value="1"> Enable multiple answer
   						</label>
@@ -56,7 +56,7 @@ $title = "Home";
   						<hr>
   						<!-- submit -->
   						<button type="submit" name="submit" class="btn btn-primary btn-wide">Create</button>
-  						<button type="reset" class="btn btn-inverse btn-wide">Save Draft</button>
+  						<!-- <button type="reset" class="btn btn-inverse btn-wide">Save Draft</button> -->
   						
   					</form>
   				</div>
