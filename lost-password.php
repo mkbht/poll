@@ -29,7 +29,6 @@ if(isset($_POST['submit'])) {
 
 		$subject = "Reset your password";
 		include('inc/mail/resetPassword.php');
-		$msg = file_get_contents('http://'.$siteurl.'/inc/mail/resetPassword.html');
 		$message = str_replace(['{{sitename}}', '{{username}}', '{{action_url}}'],
 								[siteName(), $u->username, $url], $msg);
 		// $message = "Hello $u->username, <br>
