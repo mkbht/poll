@@ -28,10 +28,10 @@ if(isset($_POST['submit'])) {
 		$headers .= "From: ".siteName()."<".strtolower(siteName())."@".$siteurl.">" . "\r\n";
 
 		$subject = "Reset your password";
-		$url = 'http://'.$siteurl.'/reset.php?key='.$hash;
+		include('inc/mail/resetPassword.php');
 		$msg = file_get_contents('http://'.$siteurl.'/inc/mail/resetPassword.html');
 		$message = str_replace(['{{sitename}}', '{{username}}', '{{action_url}}'],
-								[siteName(), $u->username, $url]);
+								[siteName(), $u->username, $url], $msg);
 		// $message = "Hello $u->username, <br>
 		// 			Please click on the link to reset your password. <br>
 		// 			<a href='http://{$siteurl}/reset.php?key=$hash'>http://{$siteurl}/reset.php?key=$hash</a>

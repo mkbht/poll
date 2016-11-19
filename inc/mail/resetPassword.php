@@ -1,3 +1,5 @@
+<?php
+$msg = <<<HTML
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml">
   <head>
@@ -105,3 +107,5 @@ width: 100% !important; height: 100%; margin: 0; line-height: 1.4; background-co
     </table>
   </body>
 </html>
+HTML;
+?>
