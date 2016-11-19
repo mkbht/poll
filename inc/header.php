@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <title><?=$sitename?> <?=isset($title)?' - '.$title:'';?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+	<meta name="description" content="<?=siteDetails()->description?>">
     <!-- Loading Bootstrap -->
     <link href="dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -16,7 +16,6 @@
     <!-- Loading Flat UI -->
     <link href="dist/css/flat-ui.min.css" rel="stylesheet">
 
-    
     <link href="dist/css/jquery.filer.css" rel="stylesheet">
     <link href="dist/css/themes/jquery.filer-dragdropbox-theme.css" rel="stylesheet">
 
@@ -30,9 +29,20 @@
     <![endif]-->
 </head>
 <body>
+<!-- Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65284192-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
 <header>
 <!-- navigation bar -->
-  <nav class="navbar navbar-default navbar-lg" role="navigation">
+  <nav class="navbar navbar-default navbar-lg">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
           <span class="sr-only">Toggle navigation</span>
@@ -60,7 +70,7 @@
             <li><a href="signin.php">Sign in</a></li>
             <li><a href="signup.php">Sign up</a></li>
           <?php endif;?>
-            <li><button class="btn btn-danger navbar-btn" type="button" onclick="window.location='index.php'"">Create Poll</button></li>
+            <li><button class="btn btn-danger navbar-btn" type="button" onclick="window.location='index.php'">Create Poll</button></li>
          </ul>
          <!-- search form -->
         <form class="navbar-form" action="search.php" role="search">
@@ -79,10 +89,10 @@
 
   <main>
     <div class="container">
-    <center>
+    <div class="text-center">
     <small>Advertisement</small>
       <?=siteDetails()->ad1?>
-    </center>
+    </div>
     <br>
       <div class="col-md-7">
       

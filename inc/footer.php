@@ -1,6 +1,6 @@
 		</div>
 		<div class="col-md-5">
-			<center><small>Advertisement</small></center>
+			<div class="text-center"><small>Advertisement</small></div>
 			<?=siteDetails()->ad2?>
 		</div>
 	</div> <!-- end container -->
