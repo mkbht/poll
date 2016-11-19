@@ -23,14 +23,21 @@ if(isset($_POST['submit'])) {
 		}
 		// mailing
 		$to = $u->email;
-		$header = "From: ".siteName();
+		$headers = "MIME-Version: 1.0" . "\r\n";
+		$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+		$headers .= "From: ".siteName()."<".siteName()."@".$siteurl.">" . "\r\n";
+
 		$subject = "Reset your password";
-		$message = "Hello $u->username, <br>
-					Please click on the link to reset your password. <br>
-					<a href='http://{$siteurl}/reset.php?key=$hash'>http://{$siteurl}/reset.php?key=$hash</a>
-					<br>
-					Regards ".siteName();
-		mail($to, $subject, $message, $header);
+		$url = 'http://'.$siteurl.'/reset.php?key='.$hash;
+		$msg = file_get_contents('inc/mail/resetPassword.html');
+		$message = str_replace(['{{sitename}}', '{{username}}', '{{action_url}}'],
+								[siteName(), $u->username, $url]);
+		// $message = "Hello $u->username, <br>
+		// 			Please click on the link to reset your password. <br>
+		// 			<a href='http://{$siteurl}/reset.php?key=$hash'>http://{$siteurl}/reset.php?key=$hash</a>
+		// 			<br>
+		// 			Regards ".siteName();
+		mail($to, $subject, $message, $headers);
 		$msg = "A reset link has been sent to email. Follow the link to reset your password.";
 	}
 	else {

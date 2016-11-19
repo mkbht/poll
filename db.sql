@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS site_details (
  	updated_at TIMESTAMP NOT NULL ON UPDATE CURRENT_TIMESTAMP
 );
 DELETE FROM site_details WHERE id=1;
-INSERT INTO site_details VALUES (1,'Poll', 'A Poll website', '', '', '', '', '', '');
+INSERT INTO site_details VALUES (1,'Poll', 'A Poll website', '', '', '', '', '', '','','');
 
 CREATE TABLE IF NOT EXISTS typecheck (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
