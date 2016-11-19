@@ -38,8 +38,7 @@ if(isset($_POST['submit'])) {
 		// 			<br>
 		// 			Regards ".siteName();
 		mail($to, $subject, $message, $headers);
-		$msg = $message;
-		//$msg = "A reset link has been sent to email. Follow the link to reset your password.";
+		$msg = "A reset link has been sent to email. Follow the link to reset your password.";
 	}
 	else {
 		"<b class='text-danger'>Unknown error occurred.</b>";
