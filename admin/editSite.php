@@ -32,9 +32,9 @@ include 'inc/header.php';
 	<label>About</label>
 	<textarea name="about" class="form-control" rows="20"><?=siteDetails()->about?></textarea>
 	<label>Privacy Policy</label>
-	<textarea name="privacy" class="form-control" rows="20"><?=siteDetails()->about?></textarea>
+	<textarea name="privacy" class="form-control" rows="20"><?=siteDetails()->privacy?></textarea>
 	<label>Contact</label>
-	<textarea name="contact" class="form-control" rows="20"><?=siteDetails()->about?></textarea>
+	<textarea name="contact" class="form-control" rows="20"><?=siteDetails()->contact?></textarea>
 	<br>
 	<button type="submit" name="submit" class="btn btn-inverse">Update</button>
 </form>
