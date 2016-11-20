@@ -55,14 +55,12 @@ body {
   }
 
   .options li {
-  	/*float: left;*/
-  	display: inline-block;
-  	width:100px;
   	margin-left: 10px;
   }
 
   .options li label {
   	font-weight: bold;
+	display: block;
   }
 
   .options li label:hover {
