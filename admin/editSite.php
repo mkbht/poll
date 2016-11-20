@@ -8,7 +8,7 @@ if(isset($_POST["submit"])) {
 	$about = $_POST["about"];
 	$privacy = $_POST["privacy"];
 	$contact = $_POST["contact"];
-	$stmt = $c->prepare("UPDATE site_details SET sitename=?,description=?, ad1=?, ad2=?");
+	$stmt = $c->prepare("UPDATE site_details SET sitename=?,description=?, ad1=?, ad2=?, about=?, privacy=?, contact=?");
 	$stmt->bind_param('sssssss', $sitename, $description, $ad1, $ad2, $about, $privacy, $contact);
 	$stmt->execute();
 	$msg = "Updated successfully";
