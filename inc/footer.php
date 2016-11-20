@@ -9,6 +9,11 @@
 <footer class="palette palette-midnight-blue clearfix">
 	<div class="container">
   © <?=date('Y')?> - <?=siteName()?>
+  <div class="pull-right">
+  	<a href="about.php">About</a> | 
+  	<a href="privacy.php">Privacy Policy</a> | 
+  	<a href="contact.php">Contact us</a>
+  </div>
 </div>
 </footer>
 
