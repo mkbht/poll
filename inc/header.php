@@ -80,10 +80,22 @@
             <li><button class="btn btn-danger navbar-btn" type="button" onclick="window.location='index.php'">Create Poll</button></li>
          </ul>
          <!-- search form -->
-        <form class="navbar-form" action="search.php" role="search">
+        <form class="navbar-form hidden-sm hidden-xs" action="search.php" role="search">
           <div class="form-group">
             <div class="input-group">
-              <input class="form-control" id="navbarInput-01" type="search" placeholder="Search" name="q">
+              <input style="width: 400px" class="form-control" id="navbarInput-01" type="search" placeholder="Search" name="q" value="<?=isset($_GET['q'])?stripcslashes($c->escape_string(trim($_GET['q']))):'';?>">
+              <span class="input-group-btn">
+                <button type="submit" class="btn"><span class="fui-search"></span></button>
+              </span>
+            </div>
+          </div>
+        </form>
+
+        <!-- small devices -->
+        <form class="navbar-form hidden-lg hidden-md" action="search.php" role="search">
+          <div class="form-group">
+            <div class="input-group">
+              <input class="form-control" id="navbarInput-01" type="search" placeholder="Search" name="q" value="<?=isset($_GET['q'])?stripcslashes($c->escape_string(trim($_GET['q']))):'';?>">
               <span class="input-group-btn">
                 <button type="submit" class="btn"><span class="fui-search"></span></button>
               </span>

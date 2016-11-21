@@ -1,6 +1,6 @@
 <?php 
 require 'inc/db.php';
-$q = isset($_GET['q'])?$c->escape_string(trim($_GET['q'])):'';
+$q = isset($_GET['q'])?stripcslashes($c->escape_string(trim($_GET['q']))):'';
 $title = isset($q)? $q .' - Search': 'Search';
 include 'inc/header.php';
 ?>
