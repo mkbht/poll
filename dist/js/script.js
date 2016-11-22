@@ -121,4 +121,34 @@ $(document).ready(function() {
         }
     });
 
+
+    // upload form
+        $(document).on("click","#add", function() {
+            $(".inputcontainer").append('\
+                <div class="imageupload">\
+                    <span class="file-name"></span>\
+                    <div class="row">\
+                    <div class="col-md-8">\
+                        <input type="text" name="text[]" class="form-control" placeholder="Enter Option..">\
+                    </div>\
+                    <div class="col-md-4"> / \
+                        <label class="btn btn-primary btn-file">Choose Photo\
+                            <input type="file" name="file[]">\
+                        </label>\
+                        <button title="remove this field" type="button" class="close remove-field" aria-label="Close">\
+                            <span aria-hidden="true">&times;</span>\
+                        </button>\
+                    </div>\
+                    </div>\
+                </div>');
+        });
+
+        $(document).on("click", ".remove-field", function() {
+            $(this).parent().parent().parent().remove();
+        });
+
+        $(document).on("change", "input:file", function() {
+            $(this).closest('.imageupload').find('.file-name').html('<i class="glyphicon glyphicon-ok-sign text-success"></i> <span class="text-success">'+$(this)[0].files[0].name+"</span>");
+        });
+
 });

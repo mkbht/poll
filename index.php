@@ -15,14 +15,38 @@ $title = "Home";
   						  <span class="input-group-addon">?</span>
   						  <input required type="text" class="form-control" placeholder="Type your question here" name="question" />
   						</div>
-  						<h5>Options <small class="text-primary">(Separated with commas)</small></h5>
-  						<div class="tagsinput-primary">
-  							<input name="options" class="tagsinput" data-role="tagsinput" />
-  						</div>
-              or
-              <!-- file input -->
-              <input type="file" name="files[]" id="uploadform" multiple="multiple">
+  						<h5>Options</h5>
+  						  <div class="inputcontainer">
+                           <div class="imageupload">
+                              <span class="file-name"></span>
+                              <div class="row">
+                              <div class="col-md-8">
+                                <input type="text" name="text[]" class="form-control" placeholder="Enter Option..">
+                              </div>
+                              <div class="col-md-4"> / 
+                                  <label class="btn btn-primary btn-file">Choose Photo
+                                      <input type="file" name="file[]">
+                                  </label>
+                              </div>
+                              </div>
+                          </div>
 
+                          <div class="imageupload">
+                              <span class="file-name"></span>
+                              <div class="row">
+                              <div class="col-md-8">
+                                <input type="text" name="text[]" class="form-control" placeholder="Enter Option..">
+                              </div>
+                              <div class="col-md-4"> / 
+                                  <label class="btn btn-primary btn-file">Choose Photo
+                                      <input type="file" name="file[]">
+                                  </label>
+                              </div>
+                              </div>
+                          </div>
+              </div>
+              <!-- add button -->
+              <label class="btn btn-xs btn-danger" id="add"><span class="fui-plus"></span></label>
   						<label class="radio">
   							<input type="radio" name="type" value="0" checked> No duplication checking
   						</label>

@@ -27,6 +27,8 @@
     <link href="dist/css/themes/jquery.filer-dragdropbox-theme.css" rel="stylesheet">
 
     <!-- loading custom stylesheet -->
+    
+ <link rel="stylesheet" type="text/css" href="dist/css/bootstrap-imageupload.min.css">
 
     <link href="dist/css/style.css" rel="stylesheet">
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
