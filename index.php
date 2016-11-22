@@ -23,7 +23,7 @@ $title = "Home";
                               <div class="col-md-8">
                                 <input type="text" name="text[]" class="form-control" placeholder="Enter Option..">
                               </div>
-                              <div class="col-md-4"> / 
+                              <div class="col-md-4">
                                   <label class="btn btn-primary btn-file">Choose Photo
                                       <input type="file" name="file[]">
                                   </label>
@@ -37,7 +37,7 @@ $title = "Home";
                               <div class="col-md-8">
                                 <input type="text" name="text[]" class="form-control" placeholder="Enter Option..">
                               </div>
-                              <div class="col-md-4"> / 
+                              <div class="col-md-4">
                                   <label class="btn btn-primary btn-file">Choose Photo
                                       <input type="file" name="file[]">
                                   </label>
