@@ -3,7 +3,7 @@ $title = "Home";
 	include('inc/db.php');
 	include('inc/header.php');
 ?>
-  			<div class="panel panel-default">
+  			<div class="panel panel-default" id="create">
   			<!-- <div class="panel-heading">
   				<h4 class="panel-title">Create a Poll</h4>
   			</div> -->
@@ -86,5 +86,4 @@ $title = "Home";
   				</div>
   			</div>
 
-  			<?php include('inc/featured.php');?>
 <?php include('inc/footer.php'); ?>

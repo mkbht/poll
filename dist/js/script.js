@@ -154,4 +154,14 @@ $(document).ready(function() {
 
 //swipebox
 $( '.swipebox' ).swipebox();
+
 });
+
+function goto() {
+                var location = window.location.pathname;
+                if(location == "/index.php" || location == "/index.php") {
+                  $("html, body").animate({ scrollTop: $("#create").offset().top - 80 }, 1000);
+                }
+                else
+                  window.location = 'index.php';
+              }

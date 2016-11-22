@@ -54,7 +54,7 @@
 </script>
 <header>
 <!-- navigation bar -->
-  <nav class="navbar navbar-default navbar-lg">
+  <nav class="navbar navbar-default navbar-fixed-top navbar-lg">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
           <span class="sr-only">Toggle navigation</span>
@@ -64,7 +64,7 @@
       <!-- menu items -->
       <div class="collapse navbar-collapse" id="navbar-collapse-01">
         <ul class="nav navbar-nav navbar-right">
-
+            <li><button class="btn btn-danger navbar-btn" type="button" onclick="goto()">Create Poll</button></li>
           <?php if(isSigned()): ?>
           <?php if(isAdmin()): ?>
             <li><a href="admin/index.php">Admin Panel</a></li>
@@ -82,7 +82,6 @@
             <li><a href="signin.php">Sign in</a></li>
             <li><a href="signup.php">Sign up</a></li>
           <?php endif;?>
-            <li><button class="btn btn-danger navbar-btn" type="button" onclick="window.location='index.php'">Create Poll</button></li>
          </ul>
          <!-- search form -->
         <form class="navbar-form hidden-sm hidden-xs" action="search.php" role="search">
@@ -112,11 +111,14 @@
   </header>
 
   <main>
-    <div class="container">
-    <div class="text-center">
-    <small>Advertisement</small>
-      <?=siteDetails()->ad1?>
+
+    <div class="container-fluid text-center">
+        <?php include('inc/featured.php');?>
+        <div class="col-md-2"><button class="btn btn-success">Donate</button></div>
+        <?php include('inc/featured.php');?>
+        <?php include('inc/featured.php');?>
     </div>
-    <br>
+
+    <div class="container">
       <div class="col-md-7">
       

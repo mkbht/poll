@@ -1,8 +1,7 @@
 <?php $row = featured_poll();
 	if(count((array) $row) > 0):
 ?>
-<br><br>
-<div class="panel panel-default jumbotron tile" style="text-align:left">
+<div class="col-md-8 col-md-offset-2 panel panel-default jumbotron tile" style="text-align:left">
 	<div class="panel-body">
 	<img src="dist/img/icons/svg/ribbon.svg" alt="ribbon" class="tile-hot-ribbon">
 	<!-- <div class="tile-hot-ribbon">hello</div> -->
@@ -16,7 +15,7 @@
 					while($option = $options->fetch_assoc()) {
 						echo <<<HTML
 						<li>
-							<label class="radio">
+							<label class="radio pull-left">
 								<input type="radio" name="options[]" value="{$option['opid']}"> {$option['answer']}
 							</label>
 						</li>
@@ -27,7 +26,7 @@ HTML;
 					while($option = $options->fetch_assoc()) {
 						echo <<<HTML
 						<li>
-							<label class="checkbox">
+							<label class="checkbox pull-left">
 								<input type="checkbox" name="options[]" value="{$option['opid']}"> {$option['answer']}
 							</label>
 						</li>
@@ -35,10 +34,13 @@ HTML;
 					}
 				}
 				?>
+				<li class="clearfix"></li>
 				</ul>
 				<hr>
-				<button type="submit" name="submit" class="btn btn-wide btn-primary">Vote</button>
-				<a href="vote.php?id=<?=$row->pid?>" class="btn btn-wide btn-inverse">View Result</a>
+				<div class="col-md-10 col-md-offset-1">
+					<button type="submit" name="submit" class="col-md-6 text-center btn btn-wide btn-primary">Vote</button>
+					<a href="vote.php?id=<?=$row->pid?>" class="col-md-6 btn btn-wide btn-inverse">View Result</a>
+				</div>
 			</form>
 		</div>
 	</div>
