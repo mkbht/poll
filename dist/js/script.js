@@ -151,4 +151,7 @@ $(document).ready(function() {
             $(this).closest('.imageupload').find('.file-name').html('<i class="glyphicon glyphicon-ok-sign text-success"></i> <span class="text-success">'+$(this)[0].files[0].name+"</span>");
         });
 
+
+//swipebox
+$( '.swipebox' ).swipebox();
 });

@@ -4,7 +4,13 @@ body {
     flex-direction: column;
     font-size: 14px;
   }
-  
+
+  .thumb {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+
   .imageupload .form-control, .imageupload label {
     margin: 5px 0;
   }

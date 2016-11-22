@@ -90,7 +90,10 @@ if(isset($_POST['submit'])) {
                 $option = "{$options[$i]}";
             else {
                 move_uploaded_file($data['image'][$i], $path);
-                $option = "<img src='$path' style='max-width:200px;max-height:200px'><br>{$options[$i]}";
+                $option = "<a href='$path' class='swipebox' title='{$options[$i]}'>
+                            <img src='$path' class='thumb' alt='{$options[$i]}'>
+                        </a><br>
+                        {$options[$i]}";
             }
 			$stmt = $c->prepare("INSERT INTO poll_options (answer, pid) VALUES(?,?)");
 			$stmt->bind_param('si',$option, $pid);

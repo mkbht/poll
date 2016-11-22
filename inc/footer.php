@@ -23,7 +23,7 @@
 <script src="dist/js/vendor/video.js"></script>
 <script src="dist/js/jquery.filer.min.js"></script>
 <script src="dist/js/flat-ui.min.js"></script>
-
+<script src="dist/js/jquery.swipebox.min.js"></script>
 <script src="dist/js/jquery.filer.min.js"></script>
 <script src="dist/js/script.js"></script>
 
