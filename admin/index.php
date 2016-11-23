@@ -10,9 +10,9 @@ include 'inc/header.php';
 	        <th data-column-id="id" data-identifier="true" data-type="numeric" data-width="60">ID</th>
 	        <th data-column-id="username" data-order="asc">Username</th>
 	        <th data-column-id="name">Name</th>
-	        <th data-column-id="Name">Email</th>
-	        <th data-column-id="Name">Gender</th>
-	        <th data-column-id="Name">Country</th>
+	        <th data-column-id="email">Email</th>
+	        <th data-column-id="gender">Gender</th>
+	        <th data-column-id="country">Country</th>
 	        <th data-column-id="link" data-formatter="link" data-sortable="false">Actions</th>
 	    </tr>
 	</thead>

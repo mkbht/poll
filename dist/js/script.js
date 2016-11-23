@@ -159,7 +159,7 @@ $( '.swipebox' ).swipebox();
 
 function goto() {
                 var location = window.location.pathname;
-                if(location == "/index.php" || location == "/index.php") {
+                if(location == "/index.php" || location == "/") {
                   $("html, body").animate({ scrollTop: $("#create").offset().top - 80 }, 1000);
                 }
                 else

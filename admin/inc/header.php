@@ -34,7 +34,7 @@
       <script src="js/vendor/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body style="margin-top: 100px">
+  <body>
 <header>
 <!-- navigation bar -->
   <nav class="navbar navbar-inverse navbar-fixed-top navbar-lg" role="navigation">
